@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="main_color">#008000</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_alpha1">#01000000</color>
+    <color name="eclipse">#363636</color>
+    <color name="limeade_alpha15">#26428600</color>
+    <color name="sirocco_alpha27">#456d6e6e</color>
+    <color name="abbey_alpha66">#a84a4d4e</color>
+    <color name="cape_cod">#494d4e</color>
+    <color name="emperor">#525252</color>
+    <color name="abbey">#4a4d4e</color>
+    <color name="emperor2">#515151</color>
+
+    <color name="white_alpha10">#1AFFFFFF</color>
+    <color name="white_alpha27">#45ffffff</color>
+    <color name="white_alpha30">#4dffffff</color>
+    <color name="white_alpha40">#64ffffff</color>
+    <color name="white_alpha50">#80ffffff</color>
+    <color name="white_alpha60">#99ffffff</color>
+    <color name="white_alpha77">#c4ffffff</color>
+    <color name="white_alpha90">#E6ffffff</color>
+
+    <color name="tundora">#4a4a4a</color>
+    <color name="alto_alpha32">#50d8d8d8</color>
+    <color name="dove_gray">#666666</color>
+    <color name="dim_gray">#707070</color>
+    <color name="dove_gray_alpha92">#EB666666</color>
+    <color name="nobel">#9b9b9b</color>
+    <color name="dusty_gray">#999999</color>
+    <color name="gallery_alpha80">#80EBEBEB</color>
+    <color name="light_gallery">#a9EBEBEB</color>
+    <color name="dark_gray">#a6a6a6</color>
+    <color name="edward">#ABACAC</color>
+    <color name="silver_chalice">#AFAFAF</color>
+    <color name="silver">#CCCCCC</color>
+    <color name="light_gray">#d5d5d5</color>
+    <color name="silver_alpha60">#99CCCCCC</color>
+    <color name="very_light_gray">#cacaca</color>
+    <color name="alto">#DBDBDB</color>
+    <color name="gallery">#EBEBEB</color>
+    <color name="mercury">#e5e5e5</color>
+    <color name="concrete">#f2f2f2</color>
+    <color name="wild_sand_alpha80">#ccf4f4f4</color>
+    <color name="wild_sand">#F4F4F4</color>
+    <color name="white_smoke">#F5F5F5</color>
+    <color name="gray_scale">#8AFFFFFF</color>
+
+    <color name="black_alpha11">#1c000000</color>
+    <color name="black_alpha12">#1f000000</color>
+    <color name="black_alpha16">#29000000</color>
+
+    <color name="nero">#262626</color>
+    <color name="nero_alpha80">#cc232323</color>
+    <color name="nero_alpha90">#e6232323</color>
+    <color name="black_alpha30">#50000000</color>
+    <color name="black_alpha33">#54000000</color>
+    <color name="black_alpha55">#8C000000</color>
+    <color name="black_alpha60">#99000000</color>
+    <color name="black_alpha75">#bf000000</color>
+    <color name="black_alpha90">#e6000000</color>
+    <color name="black">#000000</color>
+
+    <color name="red_solid">#ff0000</color>
+    <color name="red_approx">#E60000</color>
+    <color name="guardsman_red">#BD0000</color>
+    <color name="red_berry">#990000</color>
+    <color name="sangria">#9d0000</color>
+    <color name="red_alpha40">#64E60000</color>
+    <color name="maroon">#820000</color>
+    <color name="red">#E60505</color>
+    <color name="red_other">#e72d2d</color>
+    <color name="VFGChartTurquoise">#167085</color>
+
+    <color name="red_violet">#ba06a2</color>
+    <color name="seance">#9C2AA0</color>
+    <color name="royal_purple">#6e44a6</color>
+    <color name="finn">#5E2750</color>
+    <color name="vivid_violet">#9c2aa0</color>
+    <color name="tawny_port">#5F254D</color>
+    <color name="bossanova">#4B2750</color>
+    <color name="plum_approx">#762862</color>
+
+    <color name="cerulean">#00B0CA</color>
+    <color name="light_blue">#00deff</color>
+    <color name="pacific_blue">#01a5be</color>
+    <color name="blue_lagoon">#007C92</color>
+    <color name="boston_blue">#3295a7</color>
+    <color name="fountain_blue">#65afbc</color>
+    <color name="dark_turquoise">#00cbe2</color>
+    <color name="limeade">#428600</color>
+    <color name="japanese_laurel">#009900</color>
+    <color name="mountain_meadow">#1aa86b</color>
+
+    <color name="buddha_gold">#A8B400</color>
+    <color name="supernova">#FECB00</color>
+    <color name="tangerine">#EB9700</color>
+    <color name="pizazz">#F79400</color>
+
+    <color name="separator_gray">#EBEBEB</color>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+
+    <color name="zebro_wisteria">#B055B3</color>
+    <color name="zebro_blue_lagoon">#007C92</color>
+    <color name="zebro_whisper">#EBEBF5</color>
+    <color name="whisper">#ebebf5</color>
+    <color name="baltic_sea">#1f1c22</color>
+    <color name="cinder">#08060a</color>
+    <color name="alto_apparox">#d7d7d7</color>
+    <color name="zebro_tariff_small">#f8c456</color>
+    <color name="fern">#63BC66</color>
+
+    <color name="bg_zebro_tobi">#e8e8e9</color>
+    <color name="white_two">#ebebeb</color>
+    <color name="off_white">#f4f4f4</color>
+    <color name="warm_grey_two">#979797</color>
+    <color name="dark_grey">#333333</color>
+    <color name="textDefaultColor">@color/dark_grey</color>
+    <color name="textSubtitleDefaultColor">#666666</color>
+    <color name="black_de">#de000000</color>
+    <color name="black_8a">#8a000000</color>
+    <color name="transparentWhite60">#99FFFFFF</color>
+    <color name="bubble_indicator_fill_color">@color/red_secondary_button</color>
+    <color name="bubble_indicator_page_color">@color/dark_grey_30</color>
+    <color name="textColorHyperText">@color/dark_grey</color>
+    <color name="dark_grey_30">#4c333333</color>
+    <color name="brownish_grey">#666666</color>
+    <color name="action_text_color">@color/red_secondary_button</color>
+    <color name="green_text_color">@color/true_green</color>
+    <color name="true_green">#009900</color>
+    <color name="textColorSecondaryLite">@color/brownish_grey</color>
+    <color name="cursorLocalDefaultColor">@color/warm_grey_two</color>
+    <color name="very_light_pink">#cccccc</color>
+    <color name="textColorLite">@color/brownish_grey</color>
+    <color name="textColorSecondary">@color/dark_grey</color>
+    <color name="cardActionButtonTextEnabledColor">@color/dark_grey</color>
+    <color name="cardActionButtonTextDisabledColor">@color/grey_three</color>
+    <color name="grey_three">#4D333333</color>
+    <color name="red_active_primary_button">#990000</color>
+    <color name="separatorColorTertiary">@color/white_two</color>
+    <color name="black_70">#b3000000</color>
+    <color name="red_secondary_button">#e60000</color>
+    <color name="transparentDarkGray">#99000000</color>
+    <color name="cerulean_two">#007c92</color>
+    <color name="warm_grey">#979797</color>
+    <color name="errorColor">@color/red_secondary_button</color>
+
+    <color name="custom_orange">#FF8F00</color>
+
+    <color name="search_text_color">#333333</color>
+    <color name="search_text_highlight">#803db5ea</color>
+    <color name="voice_icon_color">#999999</color>
+    <color name="search_cursor_bg">#424242</color>
+    <color name="facebook_blue">#4267B2</color>
+    <color name="main_orange">#E65100</color>
+
+    <color name="colorPrimary">#9191E9</color>
+    <color name="colorPrimaryLight">#BD90E8</color>
+    <color name="colorPrimaryDark">#0404DF</color>
+    <color name="colorOnPrimary">#000000</color>
+
+    <color name="colorSecondary">#FF6D00</color>
+    <color name="colorSecondaryLight">#FEAC5E</color>
+    <color name="colorSecondaryDark">#A44700</color>
+    <color name="colorOnSecondary">#ffffff</color>
+
+    <color name="colorError">#F50057</color>
+    <color name="colorOnError">#ffffff</color>
+
+    <color name="colorSurface">#121220</color>
+    <color name="colorOnSurface">#F5F5F5</color>
+
+    <color name="colorBackground">#000000</color>
+    <color name="colorOnBackground">#F0F0F0</color>
+
+    <color name="myFacebookColor">#577cc1</color>
+
+    <color name="black_50">#80000000</color>
+
+    <color name="white_75">#BFFFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_25">#40FFFFFF</color>
+    <color name="white_10">#1AFFFFFF</color>
+    <color name="black_1">#031A1A25</color>
+
+    <color name="lolite">#6236FF</color>
+    <color name="lolite_25">#406236FF</color>
+    <color name="lolite_15">#266236FF</color>
+    <color name="amethyst">#B620E0</color>
+    <color name="amethyst_15">#26B620E0</color>
+
+    <color name="gradient1">#FEAC5E</color>
+    <color name="gradient2">#C779D0</color>
+    <color name="gradient3">#4BC0C8</color>
+
+
+
+    <color name="disabled_color">#424242</color>
+
+    <color name="material_green_a700">#00C853</color>
+    <color name="material_red_a700">#D50000</color>
+
+    <color name="material_orange_600">#FB8C00</color>
+
+    <color name="material_orange_a700">#FF6D00</color>
+    <color name="material_blue_400">#42A5F5</color>
+    <color name="material_blue_a700">#2962FF</color>
+
+    <color name="my_loading_green_oval">#1eef19</color>
+    <color name="my_loading_blue_oval">#192be9</color>
+    <color name="my_loading_red_oval">#fb1939</color>
+</resources>

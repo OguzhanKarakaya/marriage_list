@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "794164014976",
+    "project_id": "marriagelist-acc3c",
+    "storage_bucket": "marriagelist-acc3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794164014976:android:0fa940b35d68088973db65",
+        "android_client_info": {
+          "package_name": "com.main.marriage_list"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794164014976-mfo38lusce8ib4el327fibfu8iecmj42.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.main.marriage_list",
+            "certificate_hash": "62a07022aa6bbabad0f3167ee371952e52ae80b6"
+          }
+        },
+        {
+          "client_id": "794164014976-o9tql6tuhffad3e06dkck2sik205soso.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYkE-O_Vl-9p2vu0K-5IbZhVKTk5x2sqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794164014976-o9tql6tuhffad3e06dkck2sik205soso.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

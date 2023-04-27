@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homePageFragment"
+        android:title="@string/bottom_navigation_home_page" />
+
+    <item
+        android:id="@+id/discoverFragment"
+        android:title="@string/discover_page"/>
+
+    <item
+        android:id="@+id/uploadProductFragment"
+        android:title="@string/upload_product_page"/>
+
+</menu>

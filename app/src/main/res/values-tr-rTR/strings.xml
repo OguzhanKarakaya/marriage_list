@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Düğün Listem</string>
+
+
+    <string name="user_email">Mail Adresin</string>
+    <string name="user_password">Şifren</string>
+    <string name="user_name">Adın</string>
+
+    <!-- BUTTONS -->
+    <string name="login">Giriş Yap</string>
+    <string name="register">Üye Ol</string>
+    <string name="done">Bitir</string>
+    <string name="ok">Tamam</string>
+
+    <!-- MESSAGES -->
+    <string name="success">İşlem Başarılı</string>
+    <string name="fail">Hata Oluştu</string>
+    <string name="register_success">Kayıt işleminiz başarıyla tamamlandı. Bilgilerinizi kullanarak giriş yapabilirsiniz.</string>
+    <string name="register_fail">Kayıt işlemi sırasında bir hata oluştu. Daha sonra tekrar deneyiniz.</string>
+    <string name="login_fail">Giriş yaparken bir hata oluştu. Daha sonra tekrar deneeyiniz.</string>
+    <string name="check_info">Mail adresi veya şifre alanı boş olamaz.</string>
+
+    <!-- fragment_main_flow -->
+    <string name="bottom_navigation_profile">Profil</string>
+    <string name="bottom_navigation_messages">Messages</string>
+    <string name="bottom_navigation_discover">Discover</string>
+    <string name="bottom_navigation_home_page">Home Page</string>
+
+
+    <!-- PAGE NAMES -->
+    <string name="home_page">Home Page</string>
+    <string name="profile_page">Profile</string>
+    <string name="upload_product_page">Upload</string>
+    <string name="discover_page">Discover</string>
+    <string name="messages_page">Messages</string>
+</resources>

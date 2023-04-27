@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flow_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <action
+        android:id="@+id/actionSplash"
+        app:destination="@id/splashFragment" />
+
+    <action
+        android:id="@+id/actionHomePage"
+        app:destination="@id/mainFlowFragment" />
+
+    <action
+        android:id="@+id/actionLogin"
+        app:destination="@id/loginFragment" />
+
+    <fragment
+        android:id="@+id/mainFlowFragment"
+        android:name="com.main.marriage_list.ui.main.MainFlowFragment"
+        android:label="MainFlowFragment"
+        tools:layout="@layout/fragment_main_flow" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.main.marriage_list.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.main.marriage_list.ui.base.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.main.marriage_list.ui.login.RegisterFragment"
+        android:label="RegiterFragment"
+        tools:layout="@layout/fragment_register" />
+</navigation>
