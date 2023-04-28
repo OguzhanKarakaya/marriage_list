@@ -30,12 +30,23 @@ class HomePageFragment : Fragment() {
         binding.viewModel = viewModel
 
         val productDetailModel = ProductDetailModel(
-            productName = "productNameTest"
+            productName = "productNameTest",
+            productImage = "https://img.freepik.com/free-photo/golden-wedding-rings-white-rose-from-wedding-bouquet_8353-10467.jpg?size=626&ext=jpg"
         )
+
+        val productDetailModel2 = ProductDetailModel(
+            productName = "productNameTest2",
+            productImage = "https://img.freepik.com/free-photo/golden-wedding-rings-white-rose-from-wedding-bouquet_8353-10467.jpg?size=626&ext=jpg"
+        )
+
         productDetailArrayList?.add(productDetailModel)
+        productDetailArrayList?.add(productDetailModel2)
+        productDetailArrayList?.add(productDetailModel)
+
         val productModel = ProductModel(
             productDetailList = productDetailArrayList,
-            productMainName = "main name"
+            productMainName = "main name",
+            productImage = "https://img.freepik.com/free-photo/golden-wedding-rings-white-rose-from-wedding-bouquet_8353-10467.jpg?size=626&ext=jpg"
         )
 
         productList?.add(productModel)
@@ -54,7 +65,7 @@ class HomePageFragment : Fragment() {
 
     private fun listenEvents(event: HomePageEvents) {
         when (event) {
-            is HomePageEvents.OpenProductDetail -> openProductDetail(event.data)
+            is HomePageEvents.OpenProduct -> openProductDetail(event.data)
         }
     }
 

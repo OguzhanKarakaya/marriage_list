@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.main.marriage_list.model.product.ProductDetailModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:padding="4dp"
+            android:scaleType="center"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:loadImageUrl="@{model.productImage}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:text="@{model.productName}"
+            android:textColor="@color/black"
+            tools:text="Beyaz Eşya" />
+
+    </LinearLayout>
+
+</layout>

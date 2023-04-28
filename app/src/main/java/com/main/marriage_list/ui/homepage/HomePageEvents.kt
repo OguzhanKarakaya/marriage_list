@@ -3,8 +3,8 @@ package com.main.marriage_list.ui.homepage
 import com.main.marriage_list.model.product.ProductModel
 import com.main.marriage_list.ui.base.BaseEvents
 
-sealed class HomePageEvents: BaseEvents {
-    data class OpenProductDetail(
+sealed class HomePageEvents : BaseEvents {
+    data class OpenProduct(
         var data: ProductModel
-    ): HomePageEvents()
+    ) : HomePageEvents()
 }

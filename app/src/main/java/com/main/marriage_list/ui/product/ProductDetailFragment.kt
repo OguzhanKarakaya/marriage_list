@@ -1,14 +1,19 @@
 package com.main.marriage_list.ui.product
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.main.marriage_list.databinding.FragmentProductDetailBinding
+import com.main.marriage_list.helper.component.ProductBottomSheet
 import com.main.marriage_list.model.product.ProductDetailModel
 import com.main.marriage_list.model.product.ProductModel
+import com.main.marriage_list.ui.homepage.HomePageEvents
+import com.main.marriage_list.ui.homepage.HomePageViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -16,6 +21,8 @@ class ProductDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentProductDetailBinding
     private val args: ProductDetailFragmentArgs by navArgs()
+    private val viewModel: ProductDetailViewModel by viewModels()
+
     private var productDetailModel = ProductModel()
 
     override fun onCreateView(
@@ -26,8 +33,38 @@ class ProductDetailFragment : Fragment() {
         binding = FragmentProductDetailBinding.inflate(inflater, container, false)
 
         productDetailModel = args.productDetailModel
-        binding.productModel = productDetailModel
+
+        with(binding) {
+            viewModel = this@ProductDetailFragment.viewModel
+            productModel = productDetailModel
+        }
+
+        viewModel.event.observe(viewLifecycleOwner) {
+            it.getContentIfNotHandled()?.let { st ->
+                listenEvents(st)
+            }
+        }
 
         return binding.root
+    }
+
+    private fun listenEvents(event: ProductDetailEvent) {
+        when (event) {
+            is ProductDetailEvent.OpenProductDetail -> setBottomSheet(event.data)
+        }
+    }
+
+    private fun setBottomSheet(detailModel: ProductDetailModel) {
+        val bottomSheetFragment = ProductBottomSheet.newInstance(
+            productMainType = "test",
+            productType = detailModel.productName,
+            buttonClickListener = object: ProductBottomSheet.ProductSaveClickListener {
+                override fun onProductSaveClicked(productDetailModel: ProductDetailModel) {
+                    Log.i("TAG", "onProductSaveClicked: ")
+                }
+
+            }
+        )
+        bottomSheetFragment.show(requireActivity().supportFragmentManager, "")
     }
 }

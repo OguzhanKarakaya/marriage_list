@@ -10,6 +10,7 @@
     <string name="register">Sign Up</string>
     <string name="done">Done</string>
     <string name="ok">Okay</string>
+    <string name="save">Save</string>
 
     <!-- MESSAGES -->
     <string name="success">Process Success</string>
@@ -32,4 +33,12 @@
     <string name="upload_product_page">Upload</string>
     <string name="discover_page">Discover</string>
     <string name="messages_page">Messages</string>
+
+    <!-- PRODUCT -->
+    <string name="planned_count">Planned number of purchases</string>
+    <string name="purchase_count">Number of purchased</string>
+    <string name="brand">Brand</string>
+    <string name="price">Price per unit</string>
+    <string name="purchase_date">Purchase date</string>
+    <string name="product_link">Product link</string>
 </resources>

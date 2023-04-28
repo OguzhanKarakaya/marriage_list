@@ -12,6 +12,7 @@
     <string name="register">Üye Ol</string>
     <string name="done">Bitir</string>
     <string name="ok">Tamam</string>
+    <string name="save">Kaydet</string>
 
     <!-- MESSAGES -->
     <string name="success">İşlem Başarılı</string>
@@ -34,4 +35,12 @@
     <string name="upload_product_page">Upload</string>
     <string name="discover_page">Discover</string>
     <string name="messages_page">Messages</string>
+
+    <!-- PRODUCT -->
+    <string name="planned_count">Alınması planlanan adet</string>
+    <string name="purchase_count">Alınan adet</string>
+    <string name="brand">Marka</string>
+    <string name="price">Adet fiyatı</string>
+    <string name="purchase_date">Alış tarihi</string>
+    <string name="product_link">Ürün linki</string>
 </resources>

@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import android.view.View
+import android.view.ViewTreeObserver
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.main.marriage_list.R
@@ -26,10 +28,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        Handler(Looper.getMainLooper()).postDelayed({
-            observeUser()
-        }, 2000)
 
+
+        observeUser()
     }
 
     private fun observeUser() {

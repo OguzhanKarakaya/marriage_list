@@ -12,9 +12,7 @@ class HomePageViewModel @Inject constructor(repository: HomePageRepository) :
     BaseViewModel<HomePageEvents>() {
 
 
-
-
-    var productDetailClicked: (ProductModel) -> Unit = {
-        event.value = Event(HomePageEvents.OpenProductDetail(it))
+    var productClicked: (ProductModel) -> Unit = {
+        event.value = Event(HomePageEvents.OpenProduct(it))
     }
 }

@@ -33,7 +33,6 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_margin="16dp"
-            android:text="Çeyiz Listem"
             app:btnType="orange_border"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,12 +41,16 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
+            android:clipToPadding="false"
+            android:paddingStart="16dp"
+            android:paddingBottom="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnSelectType"
-            app:onProductDetailClick="@{viewModel.productDetailClicked}"
-            app:setProductList="@{productList}" />
+            app:onProductClick="@{viewModel.productClicked}"
+            app:setProductList="@{productList}"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_product_main" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

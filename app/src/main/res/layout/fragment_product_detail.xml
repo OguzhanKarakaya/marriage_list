@@ -1,26 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="productModel"
             type="com.main.marriage_list.model.product.ProductModel" />
+
+        <variable
+            name="viewModel"
+            type="com.main.marriage_list.ui.product.ProductDetailViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <Toolbar
+            android:title="@{productModel.productMainName}"
+            android:titleTextColor="@color/white"
+            android:background="@color/main_color"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{productModel.productMainName}"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:onProductDetailClick="@{viewModel.productDetailClicked}"
+            app:setProductDetailList="@{productModel.productDetailList}"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_product_detail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
