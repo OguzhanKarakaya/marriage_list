@@ -1,7 +1,6 @@
 package com.main.marriage_list.repository.homepage
 
 import android.util.Log
-import com.main.marriage_list.model.product.ProductDetailModel
 import com.main.marriage_list.model.product.ProductModel
 import io.reactivex.rxjava3.core.Single
 import javax.inject.Inject

@@ -7,6 +7,10 @@
         <variable
             name="title"
             type="String" />
+
+        <variable
+            name="image"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,6 +28,7 @@
             app:titleTextColor="@color/main_color" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            app:loadImageUrl="@{image}"
             android:id="@+id/appCompatImageView2"
             android:layout_width="100dp"
             android:layout_height="100dp"

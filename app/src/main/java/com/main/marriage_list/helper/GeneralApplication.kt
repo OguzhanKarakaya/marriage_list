@@ -2,9 +2,7 @@ package com.main.marriage_list.helper
 
 import android.app.Application
 import android.content.Context
-import android.icu.number.NumberFormatter.with
-import android.icu.number.NumberRangeFormatter.with
-import com.main.marriage_list.di.AppComponent
+import com.google.firebase.FirebaseApp
 import dagger.hilt.android.HiltAndroidApp
 
 
@@ -15,6 +13,8 @@ class GeneralApplication: Application() {
         super.onCreate()
         instance = this
         appContext = applicationContext
+        FirebaseApp.initializeApp(this)
+
         SharedPrefHelper.with(this)
     }
 

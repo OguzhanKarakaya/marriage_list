@@ -9,5 +9,8 @@ object Constants {
     var currentUser: UserModel? = UserModel()
 
     const val USERS_DATABASE = "USERS"
+    const val USER_PRODUCT_DATABASE = "USER_PRODUCT"
     const val USER_MODEL_PREF = "USER_MODEL"
+
+
 }

@@ -5,8 +5,8 @@
         android:title="@string/bottom_navigation_home_page" />
 
     <item
-        android:id="@+id/discoverFragment"
-        android:title="@string/discover_page"/>
+        android:id="@+id/addNewItemFragment"
+        android:title="Ekle"/>
 
     <item
         android:id="@+id/uploadProductFragment"

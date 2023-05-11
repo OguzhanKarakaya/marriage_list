@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="detailModel"
+            type="com.main.marriage_list.model.product.ProductDetailModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="150dp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:text="@={detailModel.productName}" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Image"
+            android:text="@={detailModel.productImage}" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etMainType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Main Type"
+            android:text="@={detailModel.productMainType}" />
+
+        <com.main.marriage_list.helper.component.CustomButton
+            android:id="@+id/btnSaveList"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="16dp"
+            android:text="Listeye Ekle" />
+
+        <com.main.marriage_list.helper.component.CustomButton
+            android:id="@+id/btnSaveDB"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="DBye Ekle"
+            app:btnType="secondary" />
+
+        <com.main.marriage_list.helper.component.CustomButton
+            android:id="@+id/btnGetDatas"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="DBden Al"
+            app:btnType="green_border" />
+
+    </LinearLayout>
+
+</layout>

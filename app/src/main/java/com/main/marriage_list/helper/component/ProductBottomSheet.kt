@@ -2,7 +2,6 @@ package com.main.marriage_list.helper.component
 
 import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,12 +22,14 @@ class ProductBottomSheet : BottomSheetDialogFragment() {
     private var onSaveButtonClickListener: ProductSaveClickListener? = null
     private var productType: String? = ""
     private var productMainType: String? = ""
+    private var image: String? = ""
     private var productDetailModel = ProductDetailModel()
 
     companion object {
         fun newInstance(
             productMainType: String? = null,
             productType: String? = null,
+            image:String? = null,
             buttonClickListener: ProductSaveClickListener? = null
         ): ProductBottomSheet {
             val fragment = ProductBottomSheet()
@@ -36,6 +37,7 @@ class ProductBottomSheet : BottomSheetDialogFragment() {
             val bundle = Bundle()
             bundle.putString("productMainType", productMainType)
             bundle.putString("productType", productType)
+            bundle.putString("image", image)
             fragment.arguments = bundle
             return fragment
         }
@@ -51,18 +53,20 @@ class ProductBottomSheet : BottomSheetDialogFragment() {
         arguments?.let {
             productMainType = it.getString("productMainType")
             productType = it.getString("productType")
+            image = it.getString("image")
         }
 
         binding.title = productType
+        binding.image = image
 
         binding.btnSaveProduct.setSafeOnClickListener {
             with(productDetailModel) {
                 productPrice = binding.etPrice.text.toString().toDouble()
                 productLink = binding.etLink.text.toString()
-                val totalCount =
-                    binding.etPlanned.text.toString().toInt() + binding.etPurchased.text.toString()
-                        .toInt()
-                productCount = totalCount
+                productCount = binding.etPlanned.text.toString().toInt() +
+                        binding.etPurchased.text.toString().toInt()
+                wantedProductCount = binding.etPlanned.text.toString().toInt()
+                boughtProductCount = binding.etPurchased.text.toString().toInt()
             }
             dismiss()
             onSaveButtonClickListener?.onProductSaveClicked(productDetailModel)

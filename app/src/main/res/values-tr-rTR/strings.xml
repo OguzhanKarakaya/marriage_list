@@ -17,6 +17,7 @@
     <!-- MESSAGES -->
     <string name="success">İşlem Başarılı</string>
     <string name="fail">Hata Oluştu</string>
+    <string name="general_fail">Bilinmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.</string>
     <string name="register_success">Kayıt işleminiz başarıyla tamamlandı. Bilgilerinizi kullanarak giriş yapabilirsiniz.</string>
     <string name="register_fail">Kayıt işlemi sırasında bir hata oluştu. Daha sonra tekrar deneyiniz.</string>
     <string name="login_fail">Giriş yaparken bir hata oluştu. Daha sonra tekrar deneeyiniz.</string>
@@ -43,4 +44,6 @@
     <string name="price">Adet fiyatı</string>
     <string name="purchase_date">Alış tarihi</string>
     <string name="product_link">Ürün linki</string>
+    <string name="is_bought">Satın alındı mı?</string>
+    <string name="is_wanted">İsteniyor mu?</string>
 </resources>

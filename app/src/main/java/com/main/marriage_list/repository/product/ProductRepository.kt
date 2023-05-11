@@ -6,5 +6,5 @@ import io.reactivex.rxjava3.core.Single
 
 interface ProductRepository {
     fun getProducts(productModel: ProductModel): Single<ProductDetailModel>
-    fun saveProducts(productDetailModel: ProductDetailModel): Single<Boolean>
+    fun saveProducts(productDetailModel: ProductDetailModel, uId: String): Single<Boolean>
 }

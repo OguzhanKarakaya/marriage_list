@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.main.marriage_list.common.setSafeOnClickListener
 import com.main.marriage_list.databinding.ItemProductMainBinding
-import com.main.marriage_list.model.product.ProductDetailModel
 import com.main.marriage_list.model.product.ProductModel
 
 class ProductMainAdapter(private val productList: ArrayList<ProductModel>) :

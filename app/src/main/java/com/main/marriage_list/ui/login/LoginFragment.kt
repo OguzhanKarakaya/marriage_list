@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.main.marriage_list.R
+import com.main.marriage_list.common.observeOnce
 import com.main.marriage_list.common.setSafeOnClickListener
 import com.main.marriage_list.databinding.FragmentLoginBinding
 import com.main.marriage_list.helper.Constants
@@ -40,27 +41,35 @@ class LoginFragment : Fragment() {
                 if (!controlIsEmpty(etEmail.text.toString()) || !controlIsEmpty(etPassword.text.toString()))
                     setResultSheet(getString(R.string.check_info))
                 else {
+                    viewModel.showProgressDialog(this@LoginFragment, "tag")
                     viewModel.signIn(etEmail.text.toString(), etPassword.text.toString())
-                    viewModel.signInLiveData.observe(viewLifecycleOwner) {
+                    viewModel.signInLiveData.observeOnce(viewLifecycleOwner) {
                         if (!it.isNullOrEmpty())
-                        getCurrentUser(uId = it)
+                            getCurrentUser(uId = it)
+                        else {
+                            viewModel.dismissProgressDialog(this@LoginFragment, "tag")
+                            setResultSheet(it ?: getString(R.string.general_fail))
+                        }
                     }
                 }
             }
         }
 
+
+
         return binding.root
     }
+
 
     private fun getCurrentUser(uId: String) {
         viewModel.getUserInfo(uId = uId)
         viewModel.currentUserLiveData.observe(viewLifecycleOwner) {
+            viewModel.dismissProgressDialog(this@LoginFragment, "tag")
             if (it != null) {
                 SharedPrefHelper.put(it, Constants.USER_MODEL_PREF)
                 Constants.currentUser = it
                 findNavController().navigate(R.id.mainFlowFragment)
-            }
-            else
+            } else
                 setResultSheet(getString(R.string.login_fail))
         }
     }

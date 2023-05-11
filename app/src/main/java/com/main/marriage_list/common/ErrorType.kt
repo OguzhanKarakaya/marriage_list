@@ -16,3 +16,7 @@ enum class ErrorEnum {
     SUBMITING,
     UPLOADING
 }
+
+enum class ErrorCodes {
+    ERROR_WRONG_PASSWORD
+}

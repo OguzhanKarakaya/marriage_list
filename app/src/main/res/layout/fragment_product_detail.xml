@@ -19,7 +19,6 @@
         android:layout_height="match_parent">
 
         <Toolbar
-            android:title="@{productModel.productMainName}"
             android:titleTextColor="@color/white"
             android:background="@color/main_color"
             android:id="@+id/toolbar"

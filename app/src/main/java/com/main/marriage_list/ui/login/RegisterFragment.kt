@@ -1,7 +1,6 @@
 package com.main.marriage_list.ui.login
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,6 +40,7 @@ class RegisterFragment : Fragment() {
     }
 
     private fun saveUserToDB(uId: String) {
+        viewModel.showProgressDialog(this@RegisterFragment, "tag")
         viewModel.saveUserToDB(binding.model ?: userModel, uId)
         viewModel.saveUserLiveData.observe(viewLifecycleOwner) {
             if (it)
@@ -51,6 +51,7 @@ class RegisterFragment : Fragment() {
     }
 
     private fun setResultSheet(isSuccess: Boolean) {
+        viewModel.dismissProgressDialog(this@RegisterFragment, "tag")
         viewModel.setResultSheet(
             fragment = this,
             isSuccess = isSuccess,

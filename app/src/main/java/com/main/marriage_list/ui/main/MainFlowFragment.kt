@@ -32,7 +32,7 @@ class MainFlowFragment: Fragment() {
 
         setupBottomNavigation()
         navController.addOnDestinationChangedListener{_, destination, _->
-            if (destination.id == R.id.homePageFragment)
+            if (destination.id == R.id.homePageFragment || destination.id == R.id.addNewItemFragment)
                 binding.bottomNavigation.visibility = View.VISIBLE
             else
                 binding.bottomNavigation.visibility = View.GONE

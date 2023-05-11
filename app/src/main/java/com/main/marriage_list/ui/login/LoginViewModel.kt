@@ -1,15 +1,17 @@
 package com.main.marriage_list.ui.login
 
 import android.util.Log
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.main.marriage_list.common.ErrorCodes
 import com.main.marriage_list.common.ErrorEnum
 import com.main.marriage_list.common.ErrorType
 import com.main.marriage_list.helper.Constants
-import com.main.marriage_list.helper.component.ResultBottomSheetFragment
 import com.main.marriage_list.model.product.ProductModel
 import com.main.marriage_list.model.user.UserBaseModel
 import com.main.marriage_list.model.user.UserModel
@@ -54,12 +56,14 @@ class LoginViewModel @Inject constructor(private val repository: LoginRepository
     }
 
     fun signIn(userEmail: String, userPassword: String) {
-        disposables.add(repository.signInUser(userEmail, userPassword)
-            .observeOn(mainThread())
-            .subscribe(
-                { _signInLiveData.postValue(it) },
-                { errorType.value = ErrorType(ErrorEnum.AUTHENTICATING, it) }
-            ))
+        val auth: FirebaseAuth = Firebase.auth
+        auth.signInWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener {
+            if (it.isSuccessful) {
+                _signInLiveData.postValue(auth.currentUser?.uid)
+            } else {
+                _signInLiveData.postValue(it.exception?.message)
+            }
+        }
     }
 
     fun onRegisterClicked(userBaseModel: UserBaseModel?) {
@@ -105,23 +109,5 @@ class LoginViewModel @Inject constructor(private val repository: LoginRepository
             .addOnFailureListener {
                 _saveUserLiveData.postValue(false)
             }
-    }
-
-    fun setResultSheet(
-        fragment: Fragment,
-        isSuccess: Boolean,
-        title: String,
-        description: String,
-        buttonText: String,
-        buttonClickListener: ResultBottomSheetFragment.ResultBottomSheetClickListener?
-    ) {
-        val bottomSheetFragment = ResultBottomSheetFragment.newInstance(
-            isSuccess = isSuccess,
-            title = title,
-            description = description,
-            buttonText = buttonText,
-            buttonClickListener = buttonClickListener
-        )
-        bottomSheetFragment.show(fragment.requireActivity().supportFragmentManager, "")
     }
 }

@@ -1,19 +1,17 @@
 package com.main.marriage_list.ui.product
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
+import com.main.marriage_list.R
 import com.main.marriage_list.databinding.FragmentProductDetailBinding
 import com.main.marriage_list.helper.component.ProductBottomSheet
 import com.main.marriage_list.model.product.ProductDetailModel
 import com.main.marriage_list.model.product.ProductModel
-import com.main.marriage_list.ui.homepage.HomePageEvents
-import com.main.marriage_list.ui.homepage.HomePageViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -56,11 +54,25 @@ class ProductDetailFragment : Fragment() {
 
     private fun setBottomSheet(detailModel: ProductDetailModel) {
         val bottomSheetFragment = ProductBottomSheet.newInstance(
-            productMainType = "test",
+            productMainType = detailModel.productMainType,
             productType = detailModel.productName,
-            buttonClickListener = object: ProductBottomSheet.ProductSaveClickListener {
+            image = detailModel.productImage,
+            buttonClickListener = object : ProductBottomSheet.ProductSaveClickListener {
                 override fun onProductSaveClicked(productDetailModel: ProductDetailModel) {
-                    Log.i("TAG", "onProductSaveClicked: ")
+                    viewModel.showProgressDialog(this@ProductDetailFragment, "tag")
+                    viewModel.saveToDb(productDetailModel)
+                    viewModel.saveProductDetailLiveData.observe(viewLifecycleOwner) {
+                        viewModel.dismissProgressDialog(this@ProductDetailFragment, "tag")
+                        if (!it)
+                            viewModel.setResultSheet(
+                                fragment = this@ProductDetailFragment,
+                                isSuccess = false,
+                                title = getString(R.string.fail),
+                                description = getString(R.string.general_fail),
+                                buttonText = getString(R.string.ok),
+                                buttonClickListener = null
+                            )
+                    }
                 }
 
             }
