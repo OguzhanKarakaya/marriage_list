@@ -4,11 +4,9 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.main.marriage_list.common.ErrorCodes
 import com.main.marriage_list.common.ErrorEnum
 import com.main.marriage_list.common.ErrorType
 import com.main.marriage_list.helper.Constants

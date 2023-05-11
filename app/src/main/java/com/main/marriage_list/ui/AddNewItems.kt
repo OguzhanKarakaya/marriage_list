@@ -13,10 +13,8 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.main.marriage_list.databinding.FragmentAddItemsBinding
-import com.main.marriage_list.model.product.ProductChildTest
 import com.main.marriage_list.model.product.ProductDetailModel
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
 
 @AndroidEntryPoint
 class AddNewItems : Fragment() {
